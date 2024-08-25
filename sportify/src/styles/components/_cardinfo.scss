@@ -1,0 +1,30 @@
+.sportsee__card {
+    display: flex;
+    gap: 24px;
+
+    padding: 32px;
+    background: #FBFBFB;
+    border-radius: 8px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #9B9EAC;
+    }
+}
