@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const CustomBarChart = ({ data }) => {
 
@@ -24,8 +24,8 @@ const CustomBarChart = ({ data }) => {
      <div className="graph-container" style={{ position: 'relative' }}>
         <h2 className="graph-title" style={{position: 'absolute'}}>Activité quotidienne</h2>
         <BarChart
-          width={1000}
-          height={300}
+          width={625}
+          height={225}
           data={data}
           margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
           barGap={10}

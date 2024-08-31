@@ -59,7 +59,7 @@ const Home = () => {
     };
 
     const radarData = USER_PERFORMANCE.find(user => user.id = id).data.map(item => ({
-        subject: translationMap[USER_PERFORMANCE.find(user => user.id = id).kind[item.kind]],
+      subject: translationMap[USER_PERFORMANCE.find(user => user.id = id).kind[item.kind]],
       value: item.value
     }));
     setUserPerformance(radarData);

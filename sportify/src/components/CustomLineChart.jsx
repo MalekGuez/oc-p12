@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 
 const CustomLineChart = ({ data }) => {
     const formatXAxisTick = (value) => {
@@ -24,7 +24,7 @@ const CustomLineChart = ({ data }) => {
 
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
-          const { day, sessionLength } = payload[0].payload;
+          const { sessionLength } = payload[0].payload;
           return (
             <div className="custom-tooltip" style={{ padding: '10px', fontSize: '12px', background: 'white' }}>
               <p>{sessionLength} min</p>
@@ -38,8 +38,8 @@ const CustomLineChart = ({ data }) => {
         <div className="custom-line-chart">
             <div className="chart-title">Durée moyenne des sessions</div>
             <LineChart
-                width={300}
-                height={300}
+                width={250}
+                height={250}
                 data={data}
                 margin={{ top: 100, right: 10, left: 10, bottom: 10 }}
             >

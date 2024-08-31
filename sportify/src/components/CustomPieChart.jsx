@@ -1,5 +1,4 @@
-import React from 'react';
-import { PieChart, Pie, Cell, Tooltip } from 'recharts';
+import { PieChart, Pie } from 'recharts';
 
 const CustomPieChart = ({percentage}) => {
   const data = [{ name: 'Percentage', value: percentage }];
@@ -10,7 +9,7 @@ const CustomPieChart = ({percentage}) => {
   return (
     <div className="custom-pie-chart">
       <span className="custom-pie-chart__title">Score</span>
-      <PieChart width={300} height={300}>
+      <PieChart width={250} height={250}>
       <Pie
           data={data}
           cx="50%"
