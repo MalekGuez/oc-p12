@@ -36,7 +36,7 @@
         }
     }
     &__content {
-        padding: 60px 100px;
+        padding: 50px 100px;
         width: 100%;
     }
 
@@ -86,16 +86,6 @@
     @media (max-width: 1350px) {
         &__content {
             padding: 32px;
-        }
-    }
-
-    @media (max-width: 1216px) {
-        &__navigation {
-            height: 950px;
-
-            p {
-                bottom: -80px;
-            }
         }
     }
 }

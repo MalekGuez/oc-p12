@@ -1,4 +1,4 @@
-import { PieChart, Pie } from 'recharts';
+import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 
 const CustomPieChart = ({percentage}) => {
   const data = [{ name: 'Percentage', value: percentage }];
@@ -9,23 +9,25 @@ const CustomPieChart = ({percentage}) => {
   return (
     <div className="custom-pie-chart">
       <span className="custom-pie-chart__title">Score</span>
-      <PieChart width={250} height={250}>
-      <Pie
-          data={data}
-          cx="50%"
-          cy="50%"
-          innerRadius={95} 
-          outerRadius={110}
-          fill="#E60000"
-          label={false} 
 
-          startAngle={startAngle}
-          endAngle={endAngle}
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+        <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            innerRadius={65} 
+            outerRadius={80}
+            fill="#E60000"
+            label={false} 
+            startAngle={startAngle}
+            endAngle={endAngle}
 
-          cornerRadius={10}
-        />
-      </PieChart>
-      <div className="custom-pie-chart__percentage"><p>{percentage}%</p> de votre <br/> objectif</div>
+            cornerRadius={10}
+          />
+        </PieChart>
+        </ResponsiveContainer>
+        <div className="custom-pie-chart__percentage"><p>{percentage}%</p> de votre <br/> objectif</div>
     </div>
   );
 };

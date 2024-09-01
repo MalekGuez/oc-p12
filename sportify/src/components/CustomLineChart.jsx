@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const CustomLineChart = ({ data }) => {
     const formatXAxisTick = (value) => {
@@ -37,23 +37,23 @@ const CustomLineChart = ({ data }) => {
     return (
         <div className="custom-line-chart">
             <div className="chart-title">Durée moyenne des sessions</div>
-            <LineChart
-                width={250}
-                height={250}
-                data={data}
-                margin={{ top: 100, right: 10, left: 10, bottom: 10 }}
-            >
-                <XAxis
-                dataKey="day"
-                tickFormatter={formatXAxisTick} 
-                axisLine={false} 
-                tickLine={false}
-                tick={{ fill: '#FFFFFF90' }}
-                />
-                <YAxis hide={true} />
-                <Tooltip content={<CustomTooltip />} wrapperStyle={{ background: 'transparent' }}/>
-                <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF90" strokeWidth={2} strokeLinecap="round" dot={false} activeDot={{ fill: 'white'}} />
-            </LineChart>
+            <ResponsiveContainer width="100%" height="100%">
+                <LineChart
+                    data={data}
+                    margin={{ top: 100, right: 10, left: 10, bottom: 10 }}
+                >
+                    <XAxis
+                    dataKey="day"
+                    tickFormatter={formatXAxisTick} 
+                    axisLine={false} 
+                    tickLine={false}
+                    tick={{ fill: '#FFFFFF90' }}
+                    />
+                    <YAxis hide={true} />
+                    <Tooltip content={<CustomTooltip />} wrapperStyle={{ background: 'transparent' }}/>
+                    <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF90" strokeWidth={2} strokeLinecap="round" dot={false} activeDot={{ fill: 'white'}} />
+                </LineChart>
+              </ResponsiveContainer>
         </div>
     );
   };
