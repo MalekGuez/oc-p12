@@ -70,7 +70,7 @@ const Home = () => {
   };
 
   const fetchDataFromApi = async () => {
-    const userData = await getUserData(12);
+    const userData = await getUserData(18);
 
     const firstName = userData.userInfos.firstName;
     setUserFirstName(firstName);

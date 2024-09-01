@@ -10,6 +10,13 @@ const getUserData = async (id) => {
           },
         });
         const data = await response.json();
+
+        if (data.data) {
+            if ('score' in data.data && !('todayScore' in data.data)) {
+                data.data.todayScore = data.data.score;
+                delete data.data.score;
+            }
+        }
         return data.data;
     } catch (error) {
         console.log(error);
