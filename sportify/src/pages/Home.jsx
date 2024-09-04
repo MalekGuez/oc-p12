@@ -70,7 +70,7 @@ const Home = () => {
   };
 
   const fetchDataFromApi = async () => {
-    const userData = await getUserData(18);
+    const userData = await getUserData(id);
 
     const firstName = userData.userInfos.firstName;
     setUserFirstName(firstName);
@@ -107,7 +107,6 @@ const Home = () => {
       subject: translationMap[userPerformance.kind[item.kind]],
       value: item.value
     }));
-    console.log(radarData);
     setUserPerformance(radarData);
   };
 
